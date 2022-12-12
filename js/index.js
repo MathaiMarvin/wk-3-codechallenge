@@ -138,19 +138,19 @@ function menuMovies(nameMovie){
 
             const movieAllTitle = document.createElement('h5')
             movieAllTitle.classList.add('card-title')
-            movieAllTitle.innerText = element.title
+            movieAllTitle.innerText = `Movie Title: ${element.title}`
 
             const movieAllRuntime = document.createElement('p')
             movieAllRuntime.classList.add('card-text')
-            movieAllRuntime.innerText = element.runtime
+            movieAllRuntime.innerText = `Run Time: ${element.runtime} minutes`
 
             const movieAllShowtime = document.createElement('p')
             movieAllShowtime.classList.add('card-text')
-            movieAllShowtime.innerText = element.showtime
+            movieAllShowtime.innerText = `Show Time: ${element.showtime}`
 
             const movieAllDescription = document.createElement('p')
             movieAllDescription.classList.add('card-text')
-            movieAllDescription.innerText = element.description
+            movieAllDescription.innerText = `Description: ${element.description}`
 
 
             const availableAllTickets = document.createElement('p')
@@ -201,6 +201,9 @@ function menuMovies(nameMovie){
             document.getElementById('movies-now').style.display = 'justify-content'
 
             document.getElementById('movies-now').appendChild(cardAllDiv);
+
+
+
 
 
             
