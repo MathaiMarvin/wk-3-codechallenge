@@ -202,18 +202,18 @@ function menuMovies(nameMovie){
 
             document.getElementById('movies-now').appendChild(cardAllDiv);
 
-
-
+            
 
 
             
+            
            
             //return Card Div
-            return cardAllDiv
+             cardAllDiv
              
-          
 
         })
+        
 
      
     })
