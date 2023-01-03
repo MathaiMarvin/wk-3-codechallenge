@@ -53,7 +53,32 @@ const handleClick = () =>{
 }
 
 //Displaying the movies
+const loadingMovies = (filmsListed)=>{
 
+    //The movie image
+    const imgPoster = document.getElementById('poster')
+    imgPoster.src = filmsListed.poster;
+    
+
+    //The movie Title
+    const titleMovie = document.getElementById('movie-card-title');
+    titleMovie.textContent = `Title of Movie: ${filmsListed.title}`;
+
+    //The movies runtime
+    const runtimeMovie = document.getElementById('movie-card-runtime');
+    runtimeMovie.textContent =  `Runtime: ${filmsListed.runtime} Minutes`;
+
+    //Movie description
+    const descriptionMovies = document.getElementById('movie-info');
+    descriptionMovies.textContent = `Description: ${filmsListed.description}`;
+
+    //Showtime
+    const movieShowtime = document.getElementById('showtime-movie');
+    movieShowtime.textContent = `Showtime: ${filmsListed.showtime}`;
+
+
+
+}
 
 // document.addEventListener('DOMContentLoaded', () =>{
 
