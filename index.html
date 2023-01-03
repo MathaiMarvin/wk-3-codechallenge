@@ -28,7 +28,7 @@
                     </ul>
                     <section>
                         <div>
-                            <div>
+                            <div class= "container mt-5" id='all-movies' hidden>
                                 <div class="card p-3 mb-2 bg-success text-white">
                                     <div id="movie-card-title" class="title">
 
@@ -39,7 +39,7 @@
                                     <div class="content">
                                         <div class="description">
                                             <div id="movie-info"> </div>
-                                                <span id="showtime-movie" class="ui label"></span>
+                                                <span id="showtime-movie" class="ui label"></span> <br>
                                                 <span id="remaining-tickets"></span>
                                             
                                         </div>
@@ -48,19 +48,26 @@
                                     <!-- Enabling the buying ticket button -->
                                     <div>
                                         <button id="ticket-movie-buying" class="btn btn-dark">BUY TICKETS</button>
+                                        
+                                    </div>
+                                    <div>
+                                        <img id="poster" src="" alt="">
                                     </div>
                                 </div>
                             </div>
+                            
+                              
+                                    <div class="container mt-5" id="first-movie-now">
+    
+                                    </div>
+                                
+                            
                         </div>
                     </section>
                 </div>
                
             </div>
            
-
-            <div class="text-center col-7 bg-light">
-                <img id="poster" src="" alt="">
-            </div>
         </div>
 
         
@@ -68,9 +75,7 @@
         
     
     </div>
-    <div class="container mt-5" id="first-movie-now">
     
-    </div>
 
 
     <script src="./js/index.js"></script>
