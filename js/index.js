@@ -156,7 +156,12 @@ function menuMovies(nameMovie){
             const availableAllTickets = document.createElement('p')
             availableAllTickets.classList.add('card-text')
             const nowTicket = element.capacity-element.tickets_sold;
-            availableAllTickets.innerText = `Available Tickets: ${nowTicket}`
+            //availableAllTickets.innerText = `Available Tickets: ${nowTicket}`
+
+
+            const exitButton = document.createElement('button')
+            exitButton.textContent ="Exit"
+            exitButton.addEventListener('click', rem)
 
             
             let ticketsBought= 0;
@@ -171,7 +176,7 @@ function menuMovies(nameMovie){
                     
                     movieBuyTicket.textContent = `Buy Tickets: ${ticketsBought}`
 
-                    availableAllTickets.textContent = `Available Tickets: ${nowTicket}`
+                    
                 }
             })
 
@@ -184,6 +189,7 @@ function menuMovies(nameMovie){
             bodyAllDiv.appendChild(movieAllDescription)
             bodyAllDiv.appendChild(movieBuyTicket)
             bodyAllDiv.appendChild(availableAllTickets)
+            bodyAllDiv.appendChild(exitButton)
 
             //Appending image to image div
             imgAllDiv.appendChild(movieAllPoster)
@@ -203,10 +209,6 @@ function menuMovies(nameMovie){
             document.getElementById('movies-now').appendChild(cardAllDiv);
 
             
-
-
-            
-            
            
             //return Card Div
              cardAllDiv
@@ -221,6 +223,10 @@ function menuMovies(nameMovie){
 }
 
 
+function rem(e){
+    e.target.parentNode.remove()
+    return loadFirstMovie()
+}
 loadAllMovies()
 loadFirstMovie()
 
