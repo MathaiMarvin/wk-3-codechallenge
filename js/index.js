@@ -26,11 +26,34 @@ const showMovies = (nameMovie) =>{
         //listed.style.cursor = 'flex'
         listed.textContent = element.title
         moviesList.appendChild(listed)
+
+        
     })
+    handleClick()
    
-
-
 }
+
+//Adding click event
+
+const handleClick = () =>{
+    let children = moviesList.children
+    for (let i=0; i<children.length; i++){
+        let child = children[i]
+
+        // adding an event listener to the child
+        child.addEventListener('click', ()=>{
+            fetch(`${moviesUrl}`)
+                .then(res => res.json())
+                .then((data) =>{
+                    document.getElementById('ticket-movie-buying').textContent = 'Buy Ticket';
+                    loadingMovies(data.films[i])
+                })
+        })
+    }
+}
+
+//Displaying the movies
+
 
 // document.addEventListener('DOMContentLoaded', () =>{
 
