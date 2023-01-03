@@ -1,7 +1,7 @@
 //displaying the first movie
 
 //Declaring variables
-let moviesUrl ="http://localhost:3000/films"
+let moviesUrl ="https://mathaimarvin.github.io/server/db.json"
 
 
 
